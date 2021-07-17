@@ -6,7 +6,7 @@
 
 html {
     font-family: SourceCodePro;
-    font-size: calc(0.85em + 1.3vw);
+    font-size: calc(0.65em + 1.25vw);
     color: #ffffff;
 }
 
@@ -18,7 +18,7 @@ html {
 
 div {
     /* width: 833px; */
-    width: 50%;
+    width: 40%;
     height: 30%;
     position: absolute;
     top: 50%;
