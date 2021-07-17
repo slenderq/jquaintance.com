@@ -1,0 +1,28 @@
+@font-face {
+    font-family: SourceCodePro;
+    src: url(fonts/SourceCodePro-Regular.ttf);
+}
+
+
+* {
+    font-family: SourceCodePro;
+    font-size: 36px;
+    color: #ffffff;
+}
+
+/* h2 { */
+    /* font-family: SourceCodePro; */
+    /* font-size: 20px; */
+    /* color: #ffffff; */
+/* } */
+
+div {
+    width: 833px;
+    height: 543px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
