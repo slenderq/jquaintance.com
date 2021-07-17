@@ -4,9 +4,9 @@
 }
 
 
-* {
+html {
     font-family: SourceCodePro;
-    font-size: 36px;
+    font-size: calc(0.85em + 1.3vw);
     color: #ffffff;
 }
 
@@ -17,8 +17,9 @@
 /* } */
 
 div {
-    width: 833px;
-    height: 543px;
+    /* width: 833px; */
+    width: 50%;
+    height: 30%;
     position: absolute;
     top: 50%;
     left: 50%;

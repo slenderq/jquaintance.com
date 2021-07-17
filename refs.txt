@@ -3,3 +3,7 @@ https://origami.kosmulski.org/blog/2021-05-16-building-personal-origami-website-
 https://bobbydreamer.com/
 https://matthiasott.com/articles/into-the-personal-website-verse
 https://paulstamatiou.com/
+
+# tutorials 
+https://www.freecodecamp.org/news/how-to-center-anything-with-css-align-a-div-text-and-more/
+https://bits.theorem.co/css-pro-tips-responsive-font-sizes-and-when-to-use-which-units/
