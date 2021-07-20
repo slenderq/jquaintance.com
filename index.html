@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="layout.css">
 </head>
 
-<body style="background-color:#000000">
+<body>
 
     <!-- production version, optimized for size and speed -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
@@ -30,13 +30,17 @@
         <br>
         I’m a
 
-        <span id=ml_dev class="link">Machine Learning Developer.</span>
+        <span id="MLDev" class="link" @mouseleave="MouseLeave" @mouseover="MouseOverMLDev">Machine Learning
+            Developer.</span>
 
-        I work on personal <span id=ml_dev class="link">projects</span> for fun.
+        I work on personal <span id="Project" class="link" @mouseleave="MouseLeave"
+            @mouseover="MouseOverProject">projects</span>
+        for fun.
 
-        I’m a <span id=ml_dev class="link"> photographer.</span>
+        I’m a <span id="Photo" class="link" @mouseleave="MouseLeave" @mouseover="MouseOverPhoto"> photographer.</span>
 
-        I like writing about what I <span id=ml_dev class="link">learn.</span>
+        I like writing about what I <span id="Learn" class="link" @mouseleave="MouseLeave"
+            @mouseover="MouseOverLearn">learn.</span>
     </div>
 
     <script src="main.js"></script>
