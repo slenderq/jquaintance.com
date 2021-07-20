@@ -20,6 +20,10 @@ html {
     color: #7F7F7F;
 }
 
+.link:hover {
+    color: #FFFFFF;
+}
+
 div {
     /* width: 833px; */
     width: 40%;
