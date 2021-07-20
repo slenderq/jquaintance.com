@@ -1,9 +1,18 @@
 
-function mouseOverMLDev() { console.log("hover!"); }
+function mouseOverMLDev() { }
+
 function mouseOverProject() { }
-function mouseOverPhoto() { }
+
+function mouseOverPhoto() {
+    document.body.style.backgroundImage = "url('images/photos.jpg')"
+}
 function mouseOverLearn() { }
-function mouseLeave() { console.log("leave"); }
+
+function mouseLeave() {
+    document.body.style.backgroundColor = "#000000";
+    document.body.style.backgroundImage = "";
+}
+
 
 
 function main_function() {
