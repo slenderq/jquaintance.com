@@ -58,10 +58,13 @@ function init() {
     learn_img = newImage('images/learn.jpg')
 }
 
+images = []
+
 function newImage(src) {
     img = new Image();
     img.onload = function () { console.log(src + ' loaded') };
     img.onerror = function () { console.log('error') }
+    images.push(img);
     img.src = src;
 
     return img;
