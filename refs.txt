@@ -7,3 +7,11 @@ https://paulstamatiou.com/
 # tutorials 
 https://www.freecodecamp.org/news/how-to-center-anything-with-css-align-a-div-text-and-more/
 https://bits.theorem.co/css-pro-tips-responsive-font-sizes-and-when-to-use-which-units/
+
+
+# photos:
+
+Photo by <a href="https://unsplash.com/@ffstop?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fotis Fotopoulos</a> on <a href="https://unsplash.com/s/photos/programming?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+Photo by <a href="https://unsplash.com/@craftedbygc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Green Chameleon</a> on <a href="https://unsplash.com/s/photos/learning?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+  
