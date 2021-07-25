@@ -9,7 +9,6 @@ function displayMouseOver(link_id, photo_src) {
     mouse_over_element = link_id
 }
 
-// test
 function mouseOverMLDev() {
     displayMouseOver("MLDev", mldev_img.src)
 }
@@ -51,6 +50,7 @@ function main() {
 
 function init() {
     // get ready to display link....
+
     document.body.style.backgroundImage = "";
     photos_img = newImage('images/photos.jpg')
     mldev_img = newImage('images/desktop.jpg')
@@ -60,9 +60,13 @@ function init() {
 
 function newImage(src) {
     img = new Image();
+    img.onload = function () { console.log(src + ' loaded') };
+    img.onerror = function () { console.log('error') }
     img.src = src;
+
     return img;
 }
+
 
 init()
 main()
