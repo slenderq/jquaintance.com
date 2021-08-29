@@ -42,7 +42,7 @@ function mouseLeave() {
 
 function main() {
 
-    document.body.style.visibility = "visible"
+    // document.body.style.visibility = "visible"
 
     var main = new Vue({
         el: '#main',
@@ -59,21 +59,19 @@ function main() {
 
 function run_init() {
 
-    init(function () {
-        main()
-    })
+    init(main)
 }
 
 function init(_callback) {
     // get ready to display link....
 
-    document.body.style.visibility = "hidden";
+    // document.body.style.visibility = "hidden";
     document.body.style.backgroundColor = "#000000";
     document.body.style.backgroundImage = "";
-    photos_img = newImage('images/photos.jpg');
-    mldev_img = newImage('images/desktop.jpg');
-    projects_img = newImage('images/vscode.png');
-    learn_img = newImage('images/learn.jpg');
+    photos_img = 'images/photos.jpg';
+    mldev_img = 'images/desktop.jpg';
+    projects_img = 'images/vscode.png';
+    learn_img = 'images/learn.jpg';
 
     _callback();
 
@@ -83,9 +81,8 @@ function init(_callback) {
     // main()
 
 }
-
+// 
 images = []
-// test
 
 function newImage(src) {
     img = new Image();
@@ -98,10 +95,17 @@ function newImage(src) {
     return img.src;
 }
 
-document.addEventListener('DOMContentLoaded',
+function preloadImages() {
+    var hiddenDiv = document.getElementById("hiddenImages")
+    for (i = 0; i < arguments.length; i++) {
+        img = document.createElement("img");
+        img.src = arguments[i];
+        img.alt = '';
+        hiddenDiv.appendChild(img);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
     // handle DOMContentLoaded event
     run_init()
-);
-
-// init()
-// main()
+});
