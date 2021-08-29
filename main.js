@@ -10,18 +10,18 @@ function displayMouseOver(link_id, photo_src) {
 }
 
 function mouseOverMLDev() {
-    displayMouseOver("MLDev", mldev_img.src)
+    displayMouseOver("MLDev", mldev_img)
 }
 
 function mouseOverProject() {
-    displayMouseOver("Project", projects_img.src)
+    displayMouseOver("Project", projects_img)
 }
 
 function mouseOverPhoto() {
-    displayMouseOver("Photo", photos_img.src)
+    displayMouseOver("Photo", photos_img)
 }
 function mouseOverLearn() {
-    displayMouseOver("Learn", learn_img.src)
+    displayMouseOver("Learn", learn_img)
 }
 
 function mouseLeave() {
@@ -51,11 +51,28 @@ function main() {
 function init() {
     // get ready to display link....
 
+    document.body.style.backgroundColor = "#000000";
     document.body.style.backgroundImage = "";
     photos_img = newImage('images/photos.jpg')
     mldev_img = newImage('images/desktop.jpg')
     projects_img = newImage('images/vscode.png')
     learn_img = newImage('images/learn.jpg')
+
+    // HACK: Preload the backgrounds by hovering them before!
+    mouseOverMLDev()
+    mouseLeave()
+
+    mouseOverProject()
+    mouseLeave()
+
+    mouseOverPhoto()
+    mouseLeave()
+
+    mouseOverLearn()
+    mouseLeave()
+
+    // document.body.style.backgroundImage = "";
+    // document.body.style.backgroundColor = "#000000";
 }
 
 images = []
@@ -66,8 +83,9 @@ function newImage(src) {
     img.onerror = function () { console.log('error') }
     images.push(img);
     img.src = src;
+    // document.body.style.backgroundImage = "url('" + src + "')";
 
-    return img;
+    return img.src;
 }
 
 
