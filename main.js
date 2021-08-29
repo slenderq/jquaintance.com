@@ -65,10 +65,10 @@ function init(_callback) {
 
     document.body.style.backgroundColor = "#000000";
     document.body.style.backgroundImage = "";
-    photos_img = 'images/photos.jpg';
-    mldev_img = 'images/desktop.jpg';
-    projects_img = 'images/vscode.png';
-    learn_img = 'images/learn.jpg';
+    photos_img = newImage('images/photos.jpg');
+    mldev_img = newImage('images/desktop.jpg');
+    projects_img = newImage('images/vscode.png');
+    learn_img = newImage('images/learn.jpg');
 
     _callback();
 
@@ -77,9 +77,11 @@ function init(_callback) {
 images = []
 
 function newImage(src) {
+    hiddenDiv = document.getElementById("hiddenImages")
     img = new Image();
     img.onload = function () { console.log(src + ' loaded') };
     img.onerror = function () { console.log('error') }
+    hiddenDiv.appendChild(img);
     images.push(img);
     img.src = src;
 

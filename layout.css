@@ -13,6 +13,8 @@ html {
 body {
     background-color: #000000;
     background-size: cover;
+
+    background-image:url('images/black.jpg'), url('images/photos.jpg'), url('images/desktop.jpg'), url('images/vscode.png'), url('images/learn.jpg');
 }
 
 /* h2 { */
