@@ -11,13 +11,23 @@
         name="viewport">
     <link rel="stylesheet" href="layout.css">
 
-    <script type="text/javascript" src="main.js"></script>
+    <!-- preloading the images  -->
+    <!-- ref: https://stackoverflow.com/questions/1373142/preloading-css-images -->
+    <link rel="preload" as="image" href='images/photos.jpg'>
+    <link rel="preload" as="image" href='images/desktop.jpg'>
+    <link rel="preload" as="image" href='images/vscode.png'>
+    <link rel="preload" as="image" href='images/learn.jpg'>
+
+    <script type=" text/javascript" src="main.js"></script>
+
+
 </head>
 
 <body>
 
     <!-- production version, optimized for size and speed -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+    <!-- <script src=" https://cdn.jsdelivr.net/npm/vue@2">
+    </script> -->
 
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -47,9 +57,6 @@
     <div id="hiddenImages" style="display: none;"></div>
 
 
-    <script type="text/javascript">
-        preloadImages('images/photos.jpg', 'images/desktop.jpg', 'images/vscode.png', 'images/learn.jpg');
-    </script>
 </body>
 
 </html>

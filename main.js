@@ -42,8 +42,6 @@ function mouseLeave() {
 
 function main() {
 
-    // document.body.style.visibility = "visible"
-
     var main = new Vue({
         el: '#main',
         data: {},
@@ -65,7 +63,6 @@ function run_init() {
 function init(_callback) {
     // get ready to display link....
 
-    // document.body.style.visibility = "hidden";
     document.body.style.backgroundColor = "#000000";
     document.body.style.backgroundImage = "";
     photos_img = 'images/photos.jpg';
@@ -75,13 +72,8 @@ function init(_callback) {
 
     _callback();
 
-
-    // document.body.style.backgroundImage = "";
-    // document.body.style.backgroundColor = "#000000";
-    // main()
-
 }
-// 
+
 images = []
 
 function newImage(src) {
@@ -90,19 +82,8 @@ function newImage(src) {
     img.onerror = function () { console.log('error') }
     images.push(img);
     img.src = src;
-    // document.body.style.backgroundImage = "url('" + src + "')";
 
     return img.src;
-}
-
-function preloadImages() {
-    var hiddenDiv = document.getElementById("hiddenImages")
-    for (i = 0; i < arguments.length; i++) {
-        img = document.createElement("img");
-        img.src = arguments[i];
-        img.alt = '';
-        hiddenDiv.appendChild(img);
-    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
