@@ -33,7 +33,7 @@ body {
     background-color: #000000;
 }
 
-div {
+.sentence {
     /* width: 833px; */
     width: 40%;
     height: 30%;
@@ -41,6 +41,18 @@ div {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.bottom-icon {
+
+    /* width: 40%; */
+    /* height: 30%; */
+    position: absolute;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    bottom: 1%;
+    right: 1%;
 }
 
 
