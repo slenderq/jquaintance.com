@@ -15,3 +15,5 @@ Photo by <a href="https://unsplash.com/@ffstop?utm_source=unsplash&utm_medium=re
 Photo by <a href="https://unsplash.com/@craftedbygc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Green Chameleon</a> on <a href="https://unsplash.com/s/photos/learning?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
   
+# some blog inspo
+https://dev.to/vycoder/creating-a-simple-blog-using-vue-with-markdown-2omd
