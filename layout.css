@@ -43,6 +43,30 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.top_content {
+    top: 5%;
+    width: 40%;
+    position: absolute;
+    transform: translate(-50%, -5%);
+    height: 30%;
+    left: 50%;
+}
+
+.list_content {
+    width: 40%;
+    left: 50%;
+    /* position: relative; */
+    /* transform: translate(-50%, -5%); */
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
 .bottom-icon {
 
     /* width: 40%; */
