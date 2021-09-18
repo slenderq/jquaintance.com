@@ -7,7 +7,7 @@
 html {
     font-family: SourceCodePro;
     font-size: calc(0.50em + 1.10vw);
-    color: #ffffff;
+    color: #7F7F7F;
 }
 
 body {
@@ -24,12 +24,16 @@ body {
 /* } */
 
 .link {
-    color: #7F7F7F;
+    color: #ffffff;
     text-decoration: none;
 }
 
+.title {
+    color: #ffffff
+}
+
 .link:hover {
-    color: #FFFFFF;
+    color: #7F7F7F;
     background-color: #000000;
 }
 
