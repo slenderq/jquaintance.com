@@ -63,6 +63,16 @@ body {
     /* transform: translate(-50%, -5%); */
 }
 
+.list_title {
+    color: #ffffff;
+    font-size: 90%
+}
+.date {
+    color: #7F7F7F;
+    /* color: #ffffff; */
+    font-size: 70%
+}
+
 .right {
     float: right;
 }
@@ -84,3 +94,11 @@ body {
 }
 
 
+#slideSource {
+  opacity: 1;
+  transition: opacity 1s; 
+}
+
+#slideSource.fade {
+  opacity: 0;
+}

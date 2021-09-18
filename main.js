@@ -5,7 +5,8 @@ var mouse_over_element = null
 function displayMouseOver(link_id, photo_src) {
     // Set everything to hidden
     document.body.style.visibility = "hidden";
-
+    // https://stackoverflow.com/questions/6121203/how-to-do-fade-in-and-fade-out-with-javascript-and-css
+    // consider doing this...
     // Only set the text to visible
     document.getElementById(link_id).style.visibility = "visible";
 
