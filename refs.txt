@@ -17,3 +17,7 @@ Photo by <a href="https://unsplash.com/@craftedbygc?utm_source=unsplash&utm_medi
   
 # some blog inspo
 https://dev.to/vycoder/creating-a-simple-blog-using-vue-with-markdown-2omd
+
+
+# learning about node
+https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
