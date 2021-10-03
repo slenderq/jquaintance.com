@@ -1,39 +1,68 @@
 
 // var fs = require('fs');
 
+
+
 function main() {
 
-    list_id = "list"
 
     var main = new Vue({
         el: '#list',
         data: {},
         methods: {},
         beforeMount() {
-            console.log("yeet")
 
         }
     })
 
     // https://stackoverflow.com/questions/31274329/get-list-of-filenames-in-folder-with-javascript
-    // var files = fs.readdirSync('/posts/')
 
-    // console.log(files)
+    paths = fetch_json("blog_post_list.json", loaded_json_callback)
 
-    var title = "I did it"
-    var date = "August 26th 2021"
-    var link = "lol"
-    append_to_list_container(list_id, title, date, link)
-    append_to_list_container(list_id, title, date, link)
-    append_to_list_container(list_id, title, date, link)
-    append_to_list_container(list_id, title, date, link)
-    append_to_list_container(list_id, title, date, link)
-    append_to_list_container(list_id, title, date, link)
-    append_to_list_container(list_id, title, date, link)
-    append_to_list_container(list_id, title, date, link)
 
 }
 
+function loaded_json_callback(paths) {
+
+    list_id = "list"
+
+    var date = "August 26th 2021"
+    var link = "lol"
+    console.log(paths)
+    for (const p of paths) {
+
+        append_to_list_container(list_id, p, date, link)
+
+
+
+    }
+    // var title = "I did it"
+    // var date = "August 26th 2021"
+    // var link = "lol"
+    // append_to_list_container(list_id, title, date, link)
+    // append_to_list_container(list_id, title, date, link)
+    // append_to_list_container(list_id, title, date, link)
+    // append_to_list_container(list_id, title, date, link)
+    // append_to_list_container(list_id, title, date, link)
+    // append_to_list_container(list_id, title, date, link)
+    // append_to_list_container(list_id, title, date, link)
+
+}
+
+
+function fetch_json(path, callback) {
+
+    var result
+    fetch(path)
+        .then(res => res.json())
+        .then(data => {
+            callback(data)
+        }).catch(err => {
+            console.error('Error: ', err);
+        });
+
+    return result;
+}
 
 function append_to_list_container(list_id, title, date, link) {
     // https://stackoverflow.com/questions/6840326/how-can-i-create-and-style-a-div-using-javascript
