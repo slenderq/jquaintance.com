@@ -17,10 +17,73 @@
         <span class="right"><a href="../learn.html" class="link">Back </a></span>
         <span>September 22, 2020</span>
         <hr />
-        <div class="blog_text"><h2 id="lorem-ipsum-dolor">Lorem ipsum dolor</h2>
-<p>sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
-<p>commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<p>commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+        <div class="blog_text"><p>The other day, one of my coworkers asked me <strong>When Should I use a class and when should I use a function?</strong></p>
+<p>I’m going to try to answer this question.</p>
+<h3 id="why-does-it-matter">Why does it matter?</h3>
+<p>A common message to new developers is that they should write “clean code”.</p>
+<p>These developers also get introduced to codebases with many classes around them, so its easy to assume that the “right” way to code is always using classes.</p>
+<p>While coming up with smart classes is a way to make code simpler it comes with a cost of extra complexity.</p>
+<h3 id="when-to-use-a-class">When to use a class:</h3>
+<p>Classes are great for when you have a metaphor to use in the code you are writing. Sometimes you might hear this being refereed to as an <em>abstraction</em>.</p>
+<p>For example, take this python code that connects to a mysql database:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="co"># importing the module</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="im">import</span> MySQLdb</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a><span class="co"># opening a database connection</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>conn <span class="op">=</span> MySQLdb.<span class="ex">connect</span>(<span class="st">&quot;localhost&quot;</span>,<span class="st">&quot;testprog&quot;</span>,<span class="st">&quot;stud&quot;</span>,<span class="st">&quot;PYDB&quot;</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a><span class="co"># define a cursor object</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>cursor <span class="op">=</span> conn.cursor</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a><span class="co"># drop table if exists</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>Cursor.execute(<span class="st">&quot;IF STUDENT TABLE EXISTS DROP IT&quot;</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a><span class="co"># query</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>sql <span class="op">=</span> <span class="st">&quot;CREATE TABLE STUDENT (NAME CHAR(30) NOT NULL, CLASS CHAR(5), AGE INT, GENDER CHAR(8), MARKS INT&quot;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a><span class="co"># execute query</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a>cursor.execute(sql)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a><span class="co"># close object</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a>cursor.close()</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a><span class="co"># close connection</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a>conn.close()</span></code></pre></div>
+<p>This code has a lot of context and is a lot to “remember” while you are coding.</p>
+<p>This means that it would be a good idea to create a class that manages this for us.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="co"># importing the module</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="im">import</span> MySQLdb</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a><span class="kw">class</span> Database():</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, hostname, dbname, user, password):</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>        <span class="co"># opening a database connection</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>        <span class="va">self</span>.conn <span class="op">=</span> MySQLdb.<span class="ex">connect</span>()</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>    </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true"></a>    <span class="kw">def</span> query(<span class="va">self</span>, query):</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true"></a>        <span class="co"># define a cursor object</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true"></a>        cursor <span class="op">=</span> <span class="va">self</span>.conn.cursor</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true"></a>        <span class="cf">try</span>: </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true"></a>            cursor.execute(query)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true"></a>        <span class="cf">finally</span>:</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true"></a>            <span class="co"># close object</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true"></a>            cursor.close()</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true"></a>    <span class="kw">def</span> shutdown(<span class="va">self</span>):</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true"></a>        <span class="va">self</span>.conn.close()</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true"></a><span class="co"># using the class</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true"></a>db <span class="op">=</span> Database(<span class="st">&quot;localhost&quot;</span>,<span class="st">&quot;testprog&quot;</span>,<span class="st">&quot;stud&quot;</span>,<span class="st">&quot;PYDB&quot;</span>)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true"></a>db.query(<span class="st">&quot;IF STUDENT TABLE EXISTS DROP IT&quot;</span>)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true"></a>db.query(<span class="st">&quot;CREATE TABLE STUDENT (NAME CHAR(30) NOT NULL, CLASS CHAR(5), AGE INT, GENDER CHAR(8), MARKS INT&quot;</span>)</span></code></pre></div>
+<p>Creating a class in this context made it easier to call the database functionality.</p>
+<p>It also allowed us to add a <code>finally</code> statement so we can handle errors if our query fails.</p>
+<p>Which one would you rather maintain?</p>
+<p>What creating a class does is trades complexity in one area for less complexity in another.</p>
+<p>This also makes our code much more <a href="https://www.drycode.io/">DRY</a></p>
+<h3 id="when-to-use-a-function">When to use a function:</h3></div>
     </div>
 </body>
 

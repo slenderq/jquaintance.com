@@ -20,6 +20,7 @@ function main() {
 
     list_id = "list"
 
+    // TODO: Make this hook actually run on git commit
     append_to_list_container(list_id, "When should I use a class vs a function?", "September 22, 2020", "posts/classes.html")
 
 }
@@ -40,12 +41,6 @@ function main() {
 //     // var title = "I did it"
 //     // var date = "August 26th 2021"
 //     // var link = "lol"
-//     // append_to_list_container(list_id, title, date, link)
-//     // append_to_list_container(list_id, title, date, link)
-//     // append_to_list_container(list_id, title, date, link)
-//     // append_to_list_container(list_id, title, date, link)
-//     // append_to_list_container(list_id, title, date, link)
-//     // append_to_list_container(list_id, title, date, link)
 //     // append_to_list_container(list_id, title, date, link)
 
 // }
