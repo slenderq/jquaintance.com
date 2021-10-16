@@ -16,38 +16,39 @@ function main() {
     })
 
     // https://stackoverflow.com/questions/31274329/get-list-of-filenames-in-folder-with-javascript
-
-    paths = fetch_json("blog_post_list.json", loaded_json_callback)
-
-
-}
-
-function loaded_json_callback(paths) {
+    // paths = fetch_json("blog_post_list.json", loaded_json_callback)
 
     list_id = "list"
 
-    var date = "August 26th 2021"
-    var link = "lol"
-    console.log(paths)
-    for (const p of paths) {
-
-        append_to_list_container(list_id, p, date, link)
-
-
-
-    }
-    // var title = "I did it"
-    // var date = "August 26th 2021"
-    // var link = "lol"
-    // append_to_list_container(list_id, title, date, link)
-    // append_to_list_container(list_id, title, date, link)
-    // append_to_list_container(list_id, title, date, link)
-    // append_to_list_container(list_id, title, date, link)
-    // append_to_list_container(list_id, title, date, link)
-    // append_to_list_container(list_id, title, date, link)
-    // append_to_list_container(list_id, title, date, link)
+    append_to_list_container(list_id, "When should I use a class vs a function?", "September 22, 2020", "posts/classes.html")
 
 }
+
+// function loaded_json_callback(paths) {
+
+
+//     var date = "August 26th 2021"
+//     var link = "lol"
+//     console.log(paths)
+//     for (const p of paths) {
+
+//         append_to_list_container(list_id, p, date, link)
+
+
+
+//     }
+//     // var title = "I did it"
+//     // var date = "August 26th 2021"
+//     // var link = "lol"
+//     // append_to_list_container(list_id, title, date, link)
+//     // append_to_list_container(list_id, title, date, link)
+//     // append_to_list_container(list_id, title, date, link)
+//     // append_to_list_container(list_id, title, date, link)
+//     // append_to_list_container(list_id, title, date, link)
+//     // append_to_list_container(list_id, title, date, link)
+//     // append_to_list_container(list_id, title, date, link)
+
+// }
 
 
 function fetch_json(path, callback) {
@@ -72,13 +73,18 @@ function append_to_list_container(list_id, title, date, link) {
 
     title_div = document.createElement("div");
     title_div.setAttribute('class', "list_title");
-    title_div.innerHTML = title;
+
+    link_a = document.createElement("a");
+    link_a.setAttribute('class', "link");
+    link_a.setAttribute('href', link);
+    link_a.innerHTML = title;
 
     date_div = document.createElement("div");
     date_div.setAttribute('class', "date");
     date_div.innerHTML = date;
 
 
+    title_div.appendChild(link_a);
     title_div.appendChild(date_div);
     list_item_div.appendChild(title_div);
 

@@ -18,5 +18,4 @@ def create_blog_post(root="markdown"):
         subprocess.run(["pandoc","--standalone", f"{root}/{md}",
         "--template", "markdown_template.html", "-o", html])
     
-
 create_blog_post()
