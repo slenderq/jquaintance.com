@@ -83,7 +83,20 @@
 <p>Which one would you rather maintain?</p>
 <p>What creating a class does is trades complexity in one area for less complexity in another.</p>
 <p>This also makes our code much more <a href="https://www.drycode.io/">DRY</a></p>
-<h3 id="when-to-use-a-function">When to use a function:</h3></div>
+<h3 id="when-to-use-a-function">When to use a function:</h3>
+<p>When you <em>don’t</em> have a very good metaphor for what you are doing, functions are more helpful.</p>
+<p>Here is an example of a class that does not need to be a class.</p>
+<pre><code>class NumberAdder():
+    def __init__(a, b):
+        self.a = a
+        self.b = b
+    def run():
+        return a + b</code></pre>
+<p>This adds complexity but does not make sense…</p>
+<p>This is a case where a function works much better!</p>
+<pre><code>def number_add(a, b):
+    return a + b</code></pre>
+<p>Often functions are better when you have a single action that you want to do and they is not any shared data between functions!</p></div>
     </div>
 </body>
 

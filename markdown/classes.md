@@ -92,11 +92,29 @@ What creating a class does is trades complexity in one area for less complexity 
 This also makes our code much more [DRY](https://www.drycode.io/)
 
 
-
-
-
 ### When to use a function:
 
+When you *don't* have a very good metaphor for what you are doing, functions are more helpful.
 
+
+Here is an example of a class that does not need to be a class. 
+```
+class NumberAdder():
+    def __init__(a, b):
+        self.a = a
+        self.b = b
+    def run():
+        return a + b
+```
+
+This adds complexity but does not make sense...
+
+This is a case where a function works much better!
+```
+def number_add(a, b):
+    return a + b
+```
+
+Often functions are better when you have a single action that you want to do and they is not any shared data between functions!
 
 
